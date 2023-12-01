@@ -15,7 +15,7 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
     this.elements = this.listSrv.listodo;
   }
-  newtodo(title: string, completed: boolean) {
-    this.listSrv.creaelement(title, completed);
+  newtodo(id: number, title: string, completed: boolean) {
+    this.listSrv.creaelement(this.elements.length + 1, title, completed);
   }
 }

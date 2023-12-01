@@ -7,9 +7,10 @@ import { Listmodel } from '../models/listmodel';
 export class ListService {
   listodo: Listmodel[] = [];
   constructor() {}
-  creaelement(title: string, completed: boolean) {
+
+  creaelement(id: number, title: string, completed: boolean) {
     setTimeout(() => {
-      this.listodo.push({ title, completed });
+      this.listodo.push({ id: this.listodo.length + 1, title, completed });
     }, 2000);
 
     console.log(this.listodo);

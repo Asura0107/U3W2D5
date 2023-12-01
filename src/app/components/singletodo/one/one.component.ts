@@ -11,13 +11,13 @@ export class OneComponent implements OnInit {
   elements: any[] = [];
 
   constructor(private listSrv: ListService) {}
-  onDelete(id: number) {
-    let todo = this.elements.filter((x) => x.id === id)[0];
-    let index = this.elements.indexOf(todo, 0);
-    if (index > -1) {
-      this.elements.splice(index, 1);
-    }
-  }
+  // onDelete(id: number) {
+  //   let todo = this.elements.filter((x) => x.id === id)[0];
+  //   let index = this.elements.indexOf(todo, 0);
+  //   if (index > -1) {
+  //     this.elements.splice(index, 1);
+  //   }
+  // }
 
   ngOnInit(): void {}
 }
