@@ -1,4 +1,4 @@
-<div *ngIf="elements.length > 0; else nolist">
+<div *ngIf="elements && elements.length > 0; else nolist">
   <app-donesingle
     [element]="element"
     [id]="i"

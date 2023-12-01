@@ -12,7 +12,5 @@ export class ListService {
     setTimeout(() => {
       this.listodo.push({ id: this.listodo.length + 1, title, completed });
     }, 2000);
-
-    console.log(this.listodo);
   }
 }

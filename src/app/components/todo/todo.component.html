@@ -2,7 +2,7 @@
 <button type="button" (click)="newtodo(elements.length + 1, title, false)">
   crea
 </button>
-<div *ngIf="elements.length > 0; else nolist">
+<div *ngIf="elements && elements.length > 0; else nolist">
   <app-one
     [element]="element"
     [id]="i"
