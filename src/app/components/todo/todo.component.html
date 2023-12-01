@@ -1,7 +1,13 @@
 <input type="text" [(ngModel)]="title" />
 <button type="button" (click)="newtodo(title, true)">crea</button>
-<app-one
-  [element]="element"
-  [id]="i"
-  *ngFor="let element of elements; let i = index"
-></app-one>
+<div *ngIf="elements.length > 0; else nolist">
+  <app-one
+    [element]="element"
+    [id]="i"
+    *ngFor="let element of elements; let i = index"
+  >
+  </app-one>
+</div>
+<ng-template #nolist>
+  <p>Ops, non ci sono elementi</p>
+</ng-template>

@@ -14,5 +14,4 @@ export class ListService {
 
     console.log(this.listodo);
   }
-  update() {}
 }
