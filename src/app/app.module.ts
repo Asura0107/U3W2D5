@@ -7,7 +7,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { DoneComponent } from './components/done/done.component';
 import { OneComponent } from './components/singletodo/one/one.component';
-import { DonesingleComponent } from './components/donesingle/donesingle/donesingle.component';
 const routes: Route[] = [
   {
     path: '',
@@ -19,7 +18,13 @@ const routes: Route[] = [
   },
 ];
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, TodoComponent, DoneComponent, OneComponent, DonesingleComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    TodoComponent,
+    DoneComponent,
+    OneComponent,
+  ],
   imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
   providers: [],
   bootstrap: [AppComponent],

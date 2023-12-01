@@ -17,4 +17,7 @@ export class DoneComponent implements OnInit {
       this.elements = this.listSrv.listodo;
     }, 2000);
   }
+  Delete(i: number) {
+    this.elements.splice(i, 1);
+  }
 }

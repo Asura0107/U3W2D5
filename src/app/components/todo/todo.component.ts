@@ -22,4 +22,7 @@ export class TodoComponent implements OnInit {
     this.listSrv.creaelement(this.elements.length + 1, title, completed);
     this.title = '';
   }
+  Delete(i: number) {
+    this.elements.splice(i, 1);
+  }
 }
