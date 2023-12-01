@@ -9,13 +9,13 @@ import { ListService } from '../service/list.service';
 export class TodoComponent implements OnInit {
   title!: string;
   elements: any[] = [];
-  @Input() element: any;
+
   constructor(private listSrv: ListService) {}
 
   ngOnInit(): void {
     this.elements = this.listSrv.listodo;
   }
-  newtodo(title: string) {
-    this.listSrv.creaelement(title);
+  newtodo(title: string, completed: boolean) {
+    this.listSrv.creaelement(title, completed);
   }
 }
