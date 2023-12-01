@@ -1,15 +1,13 @@
-<input type="text" [(ngModel)]="title" />
-<button type="button" (click)="newtodo(elements.length + 1, title, false)">
-  crea
-</button>
-<div *ngIf="elements && elements.length > 0; else nolist">
-  <app-one
-    [element]="element"
-    [id]="i"
-    *ngFor="let element of elements; let i = index"
-  >
+<div class="mt-4">
+  <input type="text" [(ngModel)]="title" />
+  <button type="button" (click)="newtodo(elements.length + 1, title, false)">
+    crea
+  </button>
+</div>
+<div *ngIf="elements && elements.length > 0; else nolist" class="mt-3">
+  <app-one [element]="element" *ngFor="let element of elements; let i = index">
   </app-one>
 </div>
 <ng-template #nolist>
-  <p>Ops, non ci sono elementi</p>
+  <p class="text-center mt-5">Ops, non ci sono elementi</p>
 </ng-template>

@@ -8,7 +8,6 @@ import { ListService } from '../../service/list.service';
 })
 export class DonesingleComponent implements OnInit {
   @Input() element: any;
-  @Input() id!: number;
 
   constructor(private listSrv: ListService) {}
 

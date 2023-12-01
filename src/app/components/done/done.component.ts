@@ -13,6 +13,8 @@ export class DoneComponent implements OnInit {
   constructor(private listSrv: ListService) {}
 
   ngOnInit(): void {
-    this.elements = this.listSrv.listodo.filter((element) => element.completed);
+    setTimeout(() => {
+      this.elements = this.listSrv.listodo;
+    }, 2000);
   }
 }

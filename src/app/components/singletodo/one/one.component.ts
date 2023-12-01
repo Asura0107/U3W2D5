@@ -7,7 +7,6 @@ import { ListService } from '../../service/list.service';
 })
 export class OneComponent implements OnInit {
   @Input() element: any;
-  @Input() id!: number;
   elements: any[] = [];
 
   constructor(private listSrv: ListService) {}

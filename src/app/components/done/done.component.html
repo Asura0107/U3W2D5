@@ -1,10 +1,9 @@
-<div *ngIf="elements && elements.length > 0; else nolist">
+<div *ngIf="elements && elements.length > 0; else nolist" class="mt-5">
   <app-donesingle
     [element]="element"
-    [id]="i"
-    *ngFor="let element of elements; let i = index"
+    *ngFor="let element of elements"
   ></app-donesingle>
 </div>
 <ng-template #nolist>
-  <p>Ops, non ci sono elementi</p>
+  <p class="text-center mt-5">Ops, non ci sono elementi</p>
 </ng-template>
