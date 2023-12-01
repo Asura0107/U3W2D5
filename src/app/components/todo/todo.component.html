@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="title" />
+<button type="button" (click)="newtodo(title)">crea</button>
+<div *ngFor="let element of elements">
+  <ul>
+    <li>{{ element.title }}</li>
+  </ul>
+</div>
